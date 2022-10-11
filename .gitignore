@@ -2,6 +2,7 @@
 
 # parcel 
 .cache
+.parcel-cache
 
 # dependencies
 /node_modules
