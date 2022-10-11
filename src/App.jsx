@@ -8,7 +8,7 @@ const App = () => {
                 <img src={StoresIcon} alt="Stores.kg" />
             </a>
         </div>
-    );
+    )
 };
 
 export default App;
