@@ -1,0 +1,12 @@
+.stores {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.stores img {
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 0 12px 0 #0000001a;
+    border-radius: 50%;
+}
