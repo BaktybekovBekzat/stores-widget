@@ -41,6 +41,7 @@ a {
     pointer-events: all;
     transition: all 0.2s;
     opacity: 1;
+    overflow: hidden;
 }
 
 .stores-modal__title {
@@ -80,6 +81,11 @@ a {
 
 .swiper-slide-shadow {
     background-color: #fff !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none !important;
 }
 
 .card-item img {
