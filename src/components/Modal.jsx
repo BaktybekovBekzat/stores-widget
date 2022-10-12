@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import "../../node_modules/swiper/swiper-bundle.css";
+import "../../node_modules/swiper/swiper.min.css";
 import { EffectCards } from "swiper";
 import CardItem from "./CardItem";
 
