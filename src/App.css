@@ -97,6 +97,12 @@ a {
     box-shadow: none !important;
 }
 
+.swiper-cards .swiper-slide {
+    transform-origin: none !important;
+    backface-visibility: visible !important;
+    overflow: visible !important;
+}
+
 .swiper-slide-shadow {
     background-color: #fff !important;
 }
