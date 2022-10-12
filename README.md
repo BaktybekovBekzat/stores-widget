@@ -12,7 +12,7 @@
 
 `<script src="https://baktybekovbekzat.github.io/stores-widget/dist/index.js"></script>`
 
-## Доваление виджета
+## Добавление виджета
 
 Чтобы виджет заработал нужно в любом месте тега 'body' создать div с классом 'stores-int'
 
