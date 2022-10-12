@@ -9,7 +9,10 @@ const App = () => {
         <div className="stores-container">
             <Modal isVisible={isModalOpen} setIsVisible={setIsModalOpen} />
             <div className="stores" onClick={() => setIsModalOpen((prev) => !prev)}>
-                <img src={StoresIcon} alt="Stores.kg" />
+                <div className="stores-anim"></div>
+                <div className="stores-img-wrap">
+                    <img src={StoresIcon} alt="Stores.kg" />
+                </div>
             </div>
         </div>
     );
