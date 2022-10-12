@@ -19,6 +19,12 @@ a {
 .stores {
     margin-top: 20px;
     align-self: flex-end;
+    transition: all 0.3s;
+}
+
+.stores img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 12px 0 #0000002f;
 }
 
 .stores img {
@@ -42,6 +48,11 @@ a {
     transition: all 0.2s;
     opacity: 1;
     overflow: hidden;
+    position: relative;
+}
+
+.mySwiper {
+    padding: 0px 15px !important;
 }
 
 .stores-modal__title {
@@ -68,6 +79,13 @@ a {
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     background: #fff;
+}
+
+#close {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    cursor: pointer;
 }
 
 .swiper__custom {

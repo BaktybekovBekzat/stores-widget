@@ -7,7 +7,7 @@ const App = () => {
 
     return (
         <div className="stores-container">
-            <Modal isVisible={isModalOpen} />
+            <Modal isVisible={isModalOpen} setIsVisible={setIsModalOpen} />
             <div className="stores" onClick={() => setIsModalOpen((prev) => !prev)}>
                 <img src={StoresIcon} alt="Stores.kg" />
             </div>

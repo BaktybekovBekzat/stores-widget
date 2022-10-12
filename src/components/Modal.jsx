@@ -4,12 +4,12 @@ import "swiper/css";
 import { EffectCards } from "swiper";
 import CardItem from "./CardItem";
 
-const Modal = ({ isVisible }) => {
+const Modal = ({ isVisible, setIsVisible }) => {
     const [title, setTitle] = useState("");
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("https://test-docs.stores.kg/api/main/page", {
+        fetch("https://docs.stores.kg/api/main/page", {
             method: "GET",
             headers: {
                 "Content-type": "application/json",
@@ -18,9 +18,15 @@ const Modal = ({ isVisible }) => {
         })
             .then((res) => res.json())
             .then((res) => {
-                const block = res["hydra:member"][0].blocks[6];
-                setTitle(block.name);
-                setProducts(block.list);
+                const blocks = res["hydra:member"][0].blocks;
+                const block = blocks.filter(
+                    (block) => block.design === "custom" && block.type === "product",
+                );
+
+                if (block) {
+                    setTitle(block[0].name);
+                    setProducts(block[0].list);
+                }
             });
     }, []);
 
@@ -48,6 +54,22 @@ const Modal = ({ isVisible }) => {
                     })}
                 </div>
             </Swiper>
+            <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                id="close"
+                onClick={() => setIsVisible(false)}>
+                <path
+                    d="M1 1L13 13M1 13L13 1"
+                    stroke="#242328"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
         </div>
     );
 };
