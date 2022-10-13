@@ -85,6 +85,7 @@ a {
     opacity: 1;
     overflow: hidden;
     position: relative;
+    background-color: #fff;
 }
 
 .mySwiper {
